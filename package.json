@@ -58,7 +58,10 @@
     "typescript-eslint": "^8.20.0"
   },
   "lint-staged": {
-    "*.ts": "eslint --fix"
+    "**/*.{js,ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "jest": {
     "moduleFileExtensions": [
